@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berat.GG | Oyun İncelemeleri, E-Spor & Yazılım Dünyası</title>
+    <meta name="description" content="En yeni oyun incelemeleri, e-spor gelişmeleri, rehberler ve Python yazılım projeleri. Berat'ın resmi oyun ve teknoloji blogu.">
+    <meta name="keywords" content="oyun incelemeleri, oyun haberleri, e-spor, berat blog, python yazılım, gaming blog">
+    <meta name="author" content="Berat">
+
+    <!-- Open Graph / Sosyal Medya -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Berat.GG | Oyun Dünyası ve Yazılım Portalı">
+    <meta property="og:description" content="Popüler oyun incelemeleri, puanlamalar, rehberler ve yazılım projeleri.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80">
+    <meta name="theme-color" content="#ff2a54">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome İkon Kütüphanesi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Üst Duyuru / Ticker Bar -->
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span class="badge-hot"><i class="fa-solid fa-bolt"></i> GÜNCEL</span>
+            <div class="ticker-text">
+                🎮 GTA 6, Cyberpunk 2077 Phantom Liberty ve yeni nesil donanım incelemeleri yayında!
+            </div>
+            <div class="top-socials">
+                <a href="https://github.com" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://discord.com" target="_blank" title="Discord"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://steamcommunity.com" target="_blank" title="Steam"><i class="fa-brands fa-steam"></i></a>
+                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasyon Çubuğu -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-gamepad logo-icon"></i>
+                BERAT<span>.GG</span>
+            </a>
+
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+                    <li><a href="#games"><i class="fa-solid fa-fire"></i> Oyunlar</a></li>
+                    <li><a href="#software"><i class="fa-solid fa-code"></i> Yazılım & Kod</a></li>
+                    <li><a href="#about"><i class="fa-solid fa-user-astronaut"></i> Hakkımda</a></li>
+                    <li><a href="#newsletter"><i class="fa-solid fa-envelope"></i> Bülten</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <button class="search-btn" id="searchToggle" title="Arama Yap">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="#games" class="nav-cta-btn"><i class="fa-solid fa-compass"></i> Keşfet</a>
+                <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Menüyü Aç/Kapat">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Hızlı Arama Kutusu (Açılır Kapanır) -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Oyun, inceleme veya proje ara... (örn: Cyberpunk, Witcher, Python)">
+                <button class="close-search" id="closeSearch">&times;</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Öne Çıkan Vitrin Bölümü -->
+    <header id="hero" class="hero-section">
+        <div class="hero-backdrop"></div>
+        <div class="hero-grid container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="live-dot"></span> 2026 OYUN & TEKNOLOJİ PORTALI
+                </div>
+                <h1 class="hero-title">
+                    Geleceğin Oyun Dünyasını <br>
+                    <span class="gradient-text">Kodla ve Keşfet</span>
+                </h1>
+                <p class="hero-desc">
+                    İzmir'den espor arenasına, profesyonel okçuluk disiplininden Python ve modern web geliştirmeye kadar; detaylı oyun incelemeleri ve strateji rehberleri burada!
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#games" class="btn btn-primary">
+                        <i class="fa-solid fa-gamepad"></i> İncelemelere Git
+                    </a>
+                    <a href="#software" class="btn btn-secondary">
+                        <i class="fa-solid fa-terminal"></i> Yazılım Projelerim
+                    </a>
+                </div>
+
+                <!-- Hızlı Sayaç ve İstatistikler -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Oyun İncelemesi</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">🏹</span>
+                        <span class="stat-label">Lisanslı Okçu</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Bağımsız Yorum</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sağ Taraf: Haftanın Öne Çıkan Oyunu (Spotlight Card) -->
+            <div class="hero-featured-card">
+                <div class="featured-badge"><i class="fa-solid fa-star"></i> HAFTANIN OYUNU</div>
+                <div class="featured-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80" alt="Haftanın Oyunu" class="featured-img">
+                    <div class="featured-score">
+                        <span class="score-val">9.7</span>
+                        <span class="score-max">/10</span>
+                    </div>
+                </div>
+                <div class="featured-body">
+                    <div class="meta-row">
+                        <span class="badge-cat">RPG / Açık Dünya</span>
+                        <span class="read-time"><i class="fa-regular fa-clock"></i> 5 dk okuma</span>
+                    </div>
+                    <h3>Cyber Odyssey: Neon Çağında Hayatta Kalma</h3>
+                    <p>Yeni nesil ışın izleme teknolojisi, sürükleyici hikaye anlatımı ve kusursuz dövüş mekanikleriyle yılın en iddialı yapımı.</p>
+                    <div class="featured-footer">
+                        <div class="platforms">
+                            <span title="PC"><i class="fa-brands fa-windows"></i></span>
+                            <span title="PlayStation"><i class="fa-brands fa-playstation"></i></span>
+                            <span title="Xbox"><i class="fa-brands fa-xbox"></i></span>
+                        </div>
+                        <button class="open-modal-btn read-btn" data-post="cyber">İncelemeyi Oku <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Oyunlar Bölümü (Kategori Filtreli & Kartlar) -->
+    <section id="games" class="section games-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="header-left">
+                    <span class="sub-heading"><i class="fa-solid fa-layer-group"></i> KÜTÜPHANE</span>
+                    <h2 class="section-title">Oyun <span>İncelemeleri & Rehberler</span></h2>
+                </div>
+                <!-- Kategori Filtreleme Butonları -->
+                <div class="category-filters" id="categoryFilters">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="inceleme">İncelemeler</button>
+                    <button class="filter-btn" data-filter="espor">E-Spor</button>
+                    <button class="filter-btn" data-filter="rehber">Rehberler</button>
+                    <button class="filter-btn" data-filter="donanim">Donanım</button>
+                </div>
+            </div>
+
+            <!-- Blog Kartları Grid -->
+            <div class="card-grid" id="postsGrid">
+                
+                <!-- Kart 1: RPG / İnceleme -->
+                <article class="card post-card" data-category="inceleme" data-title="Witcher 3 ve RPG Efsaneleri">
+                    <div class="card-thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80" alt="Witcher RPG İncelemesi" class="card-thumb" loading="lazy">
+                        <span class="card-badge cat-review">İnceleme</span>
+                        <div class="card-rating"><i class="fa-solid fa-star"></i> 9.8</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> 2026 Güncellemesi</span>
+                            <span><i class="fa-regular fa-clock"></i> 4 dk</span>
+                        </div>
+                        <h3 class="card-heading">RPG Efsaneleri: Açık Dünya Tasarımının Zirve Noktası</h3>
+                        <p class="card-excerpt">Açık dünya görev örgüsü, hikaye dallanmaları ve atmosfer oluşturma konusunda ders niteliğindeki başyapıtların analizi.</p>
+                        <div class="card-bottom">
+                            <span class="read-link open-modal-btn" data-post="witcher">Detaylı İnceleme <i class="fa-solid fa-chevron-right"></i></span>
+                            <div class="card-tags">
+                                <span class="tag">#RPG</span>
+                                <span class="tag">#Hikaye</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 2: E-Spor / Rekabetçi -->
+                <article class="card post-card" data-category="espor" data-title="CS2 ve Valorant Meta Analizi">
+                    <div class="card-thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=800&q=80" alt="E-Spor Sahnesi" class="card-thumb" loading="lazy">
+                        <span class="card-badge cat-esports">E-Spor</span>
+                        <div class="card-rating"><i class="fa-solid fa-fire"></i> Canlı</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> E-Spor Masası</span>
+                            <span><i class="fa-regular fa-clock"></i> 6 dk</span>
+                        </div>
+                        <h3 class="card-heading">2026 E-Spor Arenası: Taktiksel FPS'lerde Yeni Meta</h3>
+                        <p class="card-excerpt">Turnuva takımlarının ekonomi stratejileri, harita kontrol mekanikleri ve rekabetçi sahnede öne çıkan genç yetenekler.</p>
+                        <div class="card-bottom">
+                            <span class="read-link open-modal-btn" data-post="espor">Detaylı İnceleme <i class="fa-solid fa-chevron-right"></i></span>
+                            <div class="card-tags">
+                                <span class="tag">#FPS</span>
+                                <span class="tag">#Turnuva</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 3: Rehber / Okçuluk & FPS Aim -->
+                <article class="card post-card" data-category="rehber" data-title="Okçuluk Disiplini ile Aim Geliştirme">
+                    <div class="card-thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Aim Rehberi" class="card-thumb" loading="lazy">
+                        <span class="card-badge cat-guide">Rehber</span>
+                        <div class="card-rating"><i class="fa-solid fa-bullseye"></i> İpucu</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span><i class="fa-solid fa-crosshairs"></i> Fiziksel + Dijital</span>
+                            <span><i class="fa-regular fa-clock"></i> 3 dk</span>
+                        </div>
+                        <h3 class="card-heading">Gerçek Okçuluk Sporu Oyun Reflekslerini Nasıl Artırır?</h3>
+                        <p class="card-excerpt">Makaralı ve klasik yay disipliniyle kazanılan nefes kontrolü ve odaklanmanın rekabetçi oyunlarda nişan alma (aim) başarısına katkısı.</p>
+                        <div class="card-bottom">
+                            <span class="read-link open-modal-btn" data-post="aim">Rehberi İncele <i class="fa-solid fa-chevron-right"></i></span>
+                            <div class="card-tags">
+                                <span class="tag">#Okçuluk</span>
+                                <span class="tag">#Refleks</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 4: Donanım / Setup -->
+                <article class="card post-card" data-category="donanim" data-title="Oyuncular İçin 240Hz vs 144Hz Monitör">
+                    <div class="card-thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Donanım Rehberi" class="card-thumb" loading="lazy">
+                        <span class="card-badge cat-gear">Donanım</span>
+                        <div class="card-rating"><i class="fa-solid fa-microchip"></i> Donanım</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span><i class="fa-solid fa-tv"></i> Ekran Teknolojileri</span>
+                            <span><i class="fa-regular fa-clock"></i> 5 dk</span>
+                        </div>
+                        <h3 class="card-heading">Yüksek Yenileme Hızı: Gerçekten Fark Yaratıyor mu?</h3>
+                        <p class="card-excerpt">Tepki süreleri, OLED vs IPS paneller ve rekabetçi oyunlarda gecikme (input lag) değerlerini en aza indirme yöntemleri.</p>
+                        <div class="card-bottom">
+                            <span class="read-link open-modal-btn" data-post="hardware">Detayları Gör <i class="fa-solid fa-chevron-right"></i></span>
+                            <div class="card-tags">
+                                <span class="tag">#OLED</span>
+                                <span class="tag">#240Hz</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 5: İnceleme / Hayatta Kalma & Strateji -->
+                <article class="card post-card" data-category="inceleme" data-title="Açık Dünya Hayatta Kalma Oyunları">
+                    <div class="card-thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Hayatta Kalma Oyunu" class="card-thumb" loading="lazy">
+                        <span class="card-badge cat-review">İnceleme</span>
+                        <div class="card-rating"><i class="fa-solid fa-star"></i> 9.1</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span><i class="fa-regular fa-calendar"></i> Survival</span>
+                            <span><i class="fa-regular fa-clock"></i> 4 dk</span>
+                        </div>
+                        <h3 class="card-heading">Issız Dünyalarda Üs Kurma: Gerçekçilik vs Eğlence</h3>
+                        <p class="card-excerpt">Kaynak yönetimi, zanaat sistemleri ve dinamik hava koşullarının oyuncu psikolojisine etkisi üzerine kapsamlı bir bakış.</p>
+                        <div class="card-bottom">
+                            <span class="read-link open-modal-btn" data-post="survival">İncelemeyi Oku <i class="fa-solid fa-chevron-right"></i></span>
+                            <div class="card-tags">
+                                <span class="tag">#Survival</span>
+                                <span class="tag">#Coop</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Kart 6: Rehber / Oyun Optimizasyonu -->
+                <article class="card post-card" data-category="rehber" data-title="Windows 11 Oyun Optimizasyon Rehberi">
+                    <div class="card-thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=80" alt="Optimizasyon Rehberi" class="card-thumb" loading="lazy">
+                        <span class="card-badge cat-guide">Rehber</span>
+                        <div class="card-rating"><i class="fa-solid fa-gauge-high"></i> FPS Boost</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span><i class="fa-solid fa-sliders"></i> Sistem Ayarları</span>
+                            <span><i class="fa-regular fa-clock"></i> 7 dk</span>
+                        </div>
+                        <h3 class="card-heading">Düşük FPS ve Takılmalara Son: 10 Kritik Sistem Ayarı</h3>
+                        <p class="card-excerpt">Arka plan servislerini temizleme, GPU sürücü optimizasyonu ve oyun modunu doğru kullanarak maksimum kare hızı alma.</p>
+                        <div class="card-bottom">
+                            <span class="read-link open-modal-btn" data-post="opti">Rehberi Aç <i class="fa-solid fa-chevron-right"></i></span>
+                            <div class="card-tags">
+                                <span class="tag">#FPSBoost</span>
+                                <span class="tag">#Rehber</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Yazılım & Python Bölümü -->
+    <section id="software" class="section software-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-heading"><i class="fa-solid fa-terminal"></i> GELİŞTİRİCİ KÖŞESİ</span>
+                <h2 class="section-title">Yazılım, Kod & <span>Python Projeleri</span></h2>
+                <p class="section-subtitle">Oyun mantığını kodla birleştiren otomasyonlar, skor takipçileri ve algoritmalar.</p>
+            </div>
+
+            <div class="code-showcase-grid">
+                <!-- Sol: İnteraktif Kod Editörü Görünümü -->
+                <div class="ide-window">
+                    <div class="ide-topbar">
+                        <div class="window-controls">
+                            <span class="ctrl-dot red"></span>
+                            <span class="ctrl-dot yellow"></span>
+                            <span class="ctrl-dot green"></span>
+                        </div>
+                        <div class="ide-tabs">
+                            <button class="ide-tab active" data-file="bot"><i class="fa-brands fa-python"></i> game_bot.py</button>
+                            <button class="ide-tab" data-file="archery"><i class="fa-brands fa-python"></i> okculuk_skor.py</button>
+                            <button class="ide-tab" data-file="config"><i class="fa-solid fa-gear"></i> config.json</button>
+                        </div>
+                        <button class="run-code-btn" id="runCodeBtn" title="Kodu Çalıştır"><i class="fa-solid fa-play"></i> Çalıştır</button>
+                    </div>
+
+                    <div class="ide-body">
+                        <pre><code id="codeDisplay"># Python ile Oyun İstatistik & Refleks Analiz Scripti
+import random
+import time
+
+class GameHero:
+    def __init__(self, name, sport="Okçuluk"):
+        self.name = name
+        self.sport = sport
+        self.stats = {"odak": 95, "refleks": 98, "kodlama": 90}
+        
+    def analiz_yap(self):
+        print(f"🎯 Sporcu & Geliştirici: {self.name}")
+        print(f"🏹 Ana Disiplin: {self.sport}")
+        for stat, val in self.stats.items():
+            print(f"  ⚡ {stat.upper()}: {'█' * (val // 10)} {val}/100")
+        return "✨ Sonuç: Espor ve Yazılıma %100 Hazır!"
+
+berat = GameHero("Berat", "Klasik & Makaralı Okçuluk")
+print(berat.analiz_yap())</code></pre>
+                    </div>
+
+                    <!-- Çıktı / Konsol Alanı -->
+                    <div class="ide-terminal">
+                        <div class="term-header"><i class="fa-solid fa-square-terminal"></i> Terminal Çıktısı:</div>
+                        <div class="term-content" id="terminalOutput">
+                            > python game_bot.py<br>
+                            🎯 Sporcu & Geliştirici: Berat<br>
+                            🏹 Ana Disiplin: Okçuluk<br>
+                            &nbsp;&nbsp;⚡ ODAK: █████████ 95/100<br>
+                            &nbsp;&nbsp;⚡ REFLEKS: █████████ 98/100<br>
+                            &nbsp;&nbsp;⚡ KODLAMA: █████████ 90/100<br>
+                            ✨ Sonuç: Espor ve Yazılıma %100 Hazır!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ: Proje Kartları Listesi -->
+                <div class="project-list">
+                    <div class="project-card">
+                        <div class="p-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="p-info">
+                            <h4>Okçuluk Skor & İstatistik Takipçisi</h4>
+                            <p>Antrenmanlardaki atış serilerini, rüzgar açısını ve ortalama puanları hesaplayan Python masaüstü aracı.</p>
+                            <div class="p-tags">
+                                <span>Python</span>
+                                <span>Matplotlib</span>
+                                <span>Tkinter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="p-icon"><i class="fa-solid fa-robot"></i></div>
+                        <div class="p-info">
+                            <h4>Steam İndirim & Fiyat Botu</h4>
+                            <p>İstek listesindeki oyunlar indirime girdiğinde Discord webhook ile anında haber veren otomasyon.</p>
+                            <div class="p-tags">
+                                <span>Web Scraping</span>
+                                <span>Requests</span>
+                                <span>Discord API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="p-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="p-info">
+                            <h4>Refleks & Tepki Süresi Test Oyunu</h4>
+                            <p>Ekranda beliren hedeflere tepki hızını milisaniye cinsinden ölçüp kaydeden mini oyun projesi.</p>
+                            <div class="p-tags">
+                                <span>JavaScript</span>
+                                <span>Canvas API</span>
+                                <span>HTML5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımda & Setup Bölümü -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-col">
+                    <div class="author-badge-card">
+                        <div class="author-avatar">
+                            <i class="fa-solid fa-user-ninja"></i>
+                        </div>
+                        <div class="author-details">
+                            <h3>Berat</h3>
+                            <span class="author-title">Gamer • Okçu • Yazılımcı</span>
+                            <div class="city-tag"><i class="fa-solid fa-location-dot"></i> İzmir, Türkiye</div>
+                        </div>
+                    </div>
+
+                    <!-- Setup & Ekipman Listesi -->
+                    <div class="setup-box">
+                        <h4><i class="fa-solid fa-desktop"></i> Battlestation & Ekipman</h4>
+                        <ul>
+                            <li><span><i class="fa-solid fa-microchip"></i> İşlemci:</span> Yüksek Performanslı Çok Çekirdek</li>
+                            <li><span><i class="fa-solid fa-memory"></i> Ekran Kartı:</span> RTX Yeni Nesil Grafik</li>
+                            <li><span><i class="fa-solid fa-tv"></i> Monitör:</span> 165Hz IPS 1ms Gaming Panel</li>
+                            <li><span><i class="fa-solid fa-bullseye"></i> Spor:</span> Lisanslı Okçuluk Ekipmanı</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about-text-col">
+                    <span class="sub-heading"><i class="fa-solid fa-id-card"></i> HİKAYEM</span>
+                    <h2 class="section-title">Teknoloji & Sporun <span>Kesişimi</span></h2>
+                    
+                    <p class="lead-text">
+                        Merhaba! Ben <strong>Berat</strong>. İzmir'de yaşıyorum. Küçük yaşlardan beri hem video oyunlarının büyülü dünyasına hem de bilgisayarın arka planında dönen kodlara derin bir merak duyuyorum.
+                    </p>
+                    <p>
+                        Aynı zamanda aktif olarak <strong>okçuluk sporuyla</strong> ilgileniyorum. Okçuluk bana konsantrasyonu, sabrı ve hedefi şaşmamayı öğretti. Kod yazarken ve oyunlarda rekabet ederken de aynı disiplinle hareket ediyorum.
+                    </p>
+                    <p>
+                        Bu web sitesini, hem oyun dünyasından tarafsız ve dürüst incelemelerimi aktarmak hem de Python ve yazılım maceramı paylaşmak için tamamen sıfırdan tasarladım.
+                    </p>
+
+                    <div class="skills-chips">
+                        <span class="chip"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="chip"><i class="fa-brands fa-html5"></i> HTML5 & CSS3</span>
+                        <span class="chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="chip"><i class="fa-solid fa-crosshairs"></i> Okçuluk</span>
+                        <span class="chip"><i class="fa-solid fa-gamepad"></i> Game Review</span>
+                    </div>
+
+                    <div class="about-action">
+                        <a href="#newsletter" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> İletişime Geç</a>
+                        <a href="#games" class="btn btn-outline"><i class="fa-solid fa-compass"></i> İçerikleri Oku</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-Bülten & Topluluk -->
+    <section id="newsletter" class="section newsletter-section">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-glow"></div>
+                <div class="newsletter-content">
+                    <span class="badge-pill"><i class="fa-solid fa-envelope-open-text"></i> GÜNCELLEMELERİ KAÇIRMA</span>
+                    <h2>Yeni İnceleme & Projelerden İlk Sen Haberdar Ol!</h2>
+                    <p>Spam yok! Yalnızca haftalık en popüler oyun haberleri, incelemeler ve yazılım kaynakları.</p>
+                    
+                    <form class="newsletter-form" id="newsletterForm">
+                        <div class="input-group">
+                            <i class="fa-solid fa-envelope input-icon"></i>
+                            <input type="email" id="emailInput" placeholder="E-posta adresinizi girin..." required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Abone Ol</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    <p class="form-feedback" id="formFeedback"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Popup (Detaylı Oyun İncelemesi İçin) -->
+    <div class="modal-backdrop" id="reviewModal">
+        <div class="modal-box">
+            <button class="modal-close" id="modalCloseBtn">&times;</button>
+            <div class="modal-content" id="modalDynamicContent">
+                <!-- JavaScript dinamik dolduracak -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Bildirimi -->
+    <div class="toast" id="toastNotification">
+        <i class="fa-solid fa-circle-check"></i> <span id="toastMsg">İşlem başarılı!</span>
+    </div>
+
+    <!-- Alt Bilgi / Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-gamepad logo-icon"></i>
+                    BERAT<span>.GG</span>
+                </a>
+                <p>Oyun dünyasının nabzını tutan, samimi ve bağımsız inceleme & yazılım günlüğü.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://discord.com" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://steamcommunity.com" target="_blank"><i class="fa-brands fa-steam"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hızlı Bağlantılar</h4>
+                <ul>
+                    <li><a href="#hero">Ana Sayfa</a></li>
+                    <li><a href="#games">Oyun İncelemeleri</a></li>
+                    <li><a href="#software">Python Projeleri</a></li>
+                    <li><a href="#about">Hakkımda & Setup</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Kategoriler</h4>
+                <ul>
+                    <li><a href="#games">RPG & Açık Dünya</a></li>
+                    <li><a href="#games">E-Spor & FPS</a></li>
+                    <li><a href="#games">Donanım İncelemeleri</a></li>
+                    <li><a href="#games">Performans Rehberleri</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Yayınlama Bilgisi</h4>
+                <p class="deploy-note">
+                    <i class="fa-solid fa-cloud-arrow-up"></i> Bu site <strong>GitHub Pages</strong> veya <strong>Vercel / Netlify</strong> üzerinde ücretsiz yayına hazır biçimde yapılandırılmıştır.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 Berat.GG - Tüm Hakları Saklıdır. Tasarım & Kodlama: Berat</p>
+                <a href="#hero" class="back-to-top" title="Yukarı Çık"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
